@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-import string
-result = string.ascii_lowercase
-print(result)
+for i in "abcdefghijklmnopqrstuvwxyz":
+    print("{}".format(i), end="")
