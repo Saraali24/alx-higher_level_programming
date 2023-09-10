@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "input file "
+read file  
+echo "#!/usr/bin/python3">${file}
+chmod +x ${file}
