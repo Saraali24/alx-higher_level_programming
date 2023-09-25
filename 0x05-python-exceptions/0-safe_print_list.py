@@ -5,9 +5,8 @@ def safe_print_list(my_list=[], x=0):
         for i in range(x):
             print(my_list[i], end="")
             num_printed += 1
-    except:
-        i=i
+    except IndexError:
+        i = i
     finally:
         print("")
         return num_printed
-
