@@ -1,5 +1,23 @@
 #!/usr/bin/python3
+"""
+    matrix_divided function that divides all elements of a matrix.
+"""
 def matrix_divided(matrix, div):
+    """Divide all elements of a matrix.
+
+        Args:
+            matrix (list): A list of lists of ints or floats.
+            div (int/float): The divisor.
+        Raises:
+            TypeError: If the matrix contains non-numbers.
+            TypeError: If the matrix contains rows of different sizes.
+            TypeError: If div is not an int or float.
+            ZeroDivisionError: If div is 0.
+        Returns:
+            A new matrix representing the result of the division.
+
+    """
+
     if not all (isinstance(row, list) for row in matrix) or not all (isinstance(num, (int, float)) for row in matrix for num in row):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     for row in matrix:
