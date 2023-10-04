@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """class called Rectangle"""
 
 
@@ -60,7 +59,7 @@ class Rectangle:
             else:
                 s += '\n'
         return s
-    
+
     def __repr__(self):
 
         return f"Rectangle({self.__width}, {self.__height})"
