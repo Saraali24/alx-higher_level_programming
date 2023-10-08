@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""text_indentation
+"""
+
+
 def text_indentation(text):
+    """text_indentation
+    arg:
+        text: text
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     newstr = ""
