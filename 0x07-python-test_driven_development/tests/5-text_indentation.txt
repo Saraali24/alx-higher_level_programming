@@ -1,0 +1,31 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text = "Holberton School"
+>>> text_indentation(text)
+Holberton School
+
+>>> text = "          mohamed.           nasef       "
+>>> text_indentation(text)
+mohamed.
+<BLANKLINE>
+nasef
+
+>>> text = "Holberton.      School?      How are you:    mohamed"
+>>> text_indentation(text)
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+mohamed
+
+>>> text = "       nasef       "
+>>> text_indentation(text)
+nasef
+
+>>> text = 10
+>>> text_indentation(text)
+Traceback (most recent call last):
+...
+    raise TypeError("text must be a string")
+TypeError: text must be a string
