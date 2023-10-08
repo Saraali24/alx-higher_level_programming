@@ -12,9 +12,9 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     newstr = ""
     for i in text:
-        if (i == "." or i == "?" or i == ":"):
+        if (i in ".?:"):
             newstr += i
-            newstr += ("\n" * 2)
+            newstr += ("\n \n")
         else:
             newstr += i
-    print(newstr)
+    print(newstr, end="")
