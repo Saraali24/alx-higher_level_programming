@@ -2,7 +2,6 @@
 """lookup function"""
 
 
-
 def lookup(obj):
     """ my lookup function that return dir of objects """
 
