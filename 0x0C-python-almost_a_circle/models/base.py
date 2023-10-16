@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+import os
 """my class"""
 
 
@@ -9,11 +10,11 @@ class Base:
 
     def __init__(self, id=None):
         """init method"""
-        if id is not None:
-            self.id = id
-        else:
+        self.id = id
+        if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -49,3 +50,14 @@ class Base:
             dummy = cls(3)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = f"{cls.__name__}.json"
+        new_list = []
+        if os.path.isfile(filename):
+            with open(filename, "r", encoding='utf-8') as file:
+                data = cls.from_json_string(file.read())
+            for i in data:
+                new_list.append(cls.create(**i))
+        return new_list
