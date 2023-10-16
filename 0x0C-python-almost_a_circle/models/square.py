@@ -8,20 +8,20 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Instantiation of Square"""
         super().__init__(size, size, x, y, id)
-        self.__size = size
 
     # Getter
     @property
     def size(self):
         """return size"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         """checks the size"""
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        self.__size = value
+        if not isinstance(value, int):
+            TypeError("width must be an integer")
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """Override str function to return message"""
