@@ -18,7 +18,6 @@ Unittest classes:
 import io
 import sys
 import unittest
-import os
 from models.base import Base
 from models.square import Square
 
