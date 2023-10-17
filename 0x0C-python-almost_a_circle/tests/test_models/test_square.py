@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """ Module for test Square class """
 import unittest
+import sys
+import os
+import json
 from io import StringIO
 from unittest import TestCase
 from unittest.mock import patch
