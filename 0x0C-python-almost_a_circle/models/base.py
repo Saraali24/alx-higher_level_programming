@@ -64,7 +64,7 @@ class Base:
                 new_list.append(cls.create(**i))
         return new_list
 
- @classmethod
+    @classmethod
     def save_to_file_csv(cls, list_objs):
         """Write the CSV serialization of a list of objects to a file.
 
