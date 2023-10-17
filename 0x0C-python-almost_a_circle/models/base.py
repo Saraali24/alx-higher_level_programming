@@ -31,7 +31,7 @@ class Base:
         else:
             json_string =\
                 cls.to_json_string([obj.to_dictionary() for obj in list_objs])
-            filename = cls.__name__ + ".json"
+            filename = "{}.json".format(cls.__name__)
             with open(filename, 'w', encoding='utf-8') as file:
                 file.write(json_string)
 
@@ -54,7 +54,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        filename = cls.__name__ + ".json"
+        filename = "{}.json".format(cls.__name__)
         new_list = []
         if os.path.isfile(filename):
             with open(filename, "r", encoding='utf-8') as file:
